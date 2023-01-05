@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="favicon.ico"> 
+    <link rel="shortcut icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>桥城中学2101</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -11,54 +11,145 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         /*实现logo的动画*/
-        #logo{
+        #logo {
+            z-index: 999;
             text-align: center;
         }
+
         /*钢笔*/
         @keyframes pen {
-            from{
+            from {
                 opacity: 0;
             }
-            to{
+
+            to {
                 opacity: 1;
             }
         }
-        #pen{
+
+        #pen {
+            z-index: 999;
             animation-name: pen;
             animation-duration: 4s;
             animation-fill-mode: forwards;
         }
+
         /*圆环*/
         @keyframes round {
-            from{
+            from {
                 transform: scale(20);
             }
-            to{
+
+            to {
                 transform: scale(1);
             }
         }
-        #round{
+
+        #round {
+            z-index: 999;
             animation-name: round;
             animation-duration: 2s;
             animation-fill-mode: forwards;
         }
-        #lg1,#lg2{
+
+        #lg1,
+        #lg2 {
+            z-index: 999;
             width: 100%;
             text-align: center;
-            position: fixed;
+            position: absolute;
         }
 
+        /*标题文字*/
+        #text {
+            display: inline-block;
+            position: relative;
+            top: 300px;
+            left: 50%;
+            /* 设置等宽字体 */
+            font-family: monospace;
+            color: #000;
+            font-size: 32px;
+            text-align: center;
+            transform: translateX(-50%);
+        }
+
+        #text::before,
+        #text::after {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            content: '';
+            /* animation: typewriter 3s steps(18) forwards; */
+        }
+
+        #text::after {
+            width: 5px;
+            border-radius: 1em;
+            background-color: #000;
+            /* animation: typewriter 3s steps(18) forwards, flashing .3s ease-out forwards infinite; */
+        }
+
+        @keyframes typewriter {
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes flashing {
+            to {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="2101.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            2101
+        </a>
+    </nav>
     <div id="logo">
         <div id="lg1"><img src=".\pen.png" id="pen" /></div>
-        
         <div id="lg2"><img src=".\round.png" id="round" /></div>
-        
     </div>
+    <div data-relative-input="true" id="scene">
+        <div id="text" data-depth="0.6">
+            <h1>2 1 0 1</h1>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">桥城中学2101</span>
+            <a></a>
+            <a href="https://github.com/qczx2101/qczx2101.github.io" class="btn btn-primary btn-sm active" role="button"
+                aria-pressed="true">来扒光我的代码！</a>
+        </div>
+    </footer>
+    <script>
+        const text = document.querySelector('#text');
+        // 获取文本长度
+        const wordNum = text.outerText.length;
+        // 创建一个style标签
+        const styleElement = document.createElement('style');
+
+        styleElement.innerHTML = `#text::before {animation: typewriter ${wordNum * 0.2}s steps(${wordNum}) forwards;}`;
+
+        styleElement.innerHTML += `#text::after {animation: typewriter ${wordNum * 0.2}s steps(${wordNum}) forwards, flashing .3s ease-out forwards infinite;}`;
+        
+        document.head.appendChild(styleElement);
+    </script>
+    </script>
 </body>
 
 </html>

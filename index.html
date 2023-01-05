@@ -120,6 +120,31 @@
             margin: 0 auto;
         }
 
+        .button2 {
+            background-color: rgba(0, 0, 0, 0);
+            color: black;
+            border-color: rgba(0, 0, 0, 0);
+            margin: 0 auto;
+        }
+
+        @keyframes toround {
+            from {
+                background-color: rgba(0, 0, 0, 0);
+                border-radius: 0;
+            }
+
+            to {
+                background-color: #007af8;
+                border-radius: 64px;
+            }
+        }
+
+        .button2:hover {
+            animation-name: toround;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+
         #bili {
             text-align: center;
             position: relative;
@@ -127,7 +152,7 @@
         }
 
         .ftr {
-            position: absolute;
+            position: relative;
             bottom: 0px;
             text-align: center;
         }
@@ -135,12 +160,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">
             <img src="2101.png" width="30" height="30" class="d-inline-block align-top" alt="">
             2101
         </a>
-    </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#about">关于我们<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <div id="logo">
         <div id="lg1"><img src=".\pen.png" id="pen" /></div>
         <div id="lg2"><img src=".\round.png" id="round" /></div>
@@ -153,9 +188,95 @@
         <button class="button circle" onclick="go('https:\/\/space.bilibili.com/1103333077')">来我B站</button>
     </div>
 
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--内容-->
+    <div id="about">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">关于我们
+                </h1>
+                <p class="lead">“2101”这个称呼始于网课<button onclick="go('https:\/\/space.bilibili.com\/3461574163434426')"
+                        class="button2">醒醒吧骚年114514</button>时一次心血来潮的建群，当时学生建群并不受欢迎。
+                    <br>
+                    后来<button onclick="go('https:\/\/space.bilibili.com\/561804677')"
+                        class="button2">一头乖猪</button>建了一个“无规则群”，后来被2101吞并，这是2101扩张的开始
+                    <br>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">阿巴啊巴
+                </h1>
+                <p class="lead">阿巴啊巴阿巴啊巴阿巴啊巴
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">阿巴啊巴
+                </h1>
+                <p class="lead">阿巴啊巴阿巴啊巴阿巴啊巴
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">阿巴啊巴
+                </h1>
+                <p class="lead">阿巴啊巴阿巴啊巴阿巴啊巴
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">阿巴啊巴
+                </h1>
+                <p class="lead">阿巴啊巴阿巴啊巴阿巴啊巴
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">阿巴啊巴
+                </h1>
+                <p class="lead">阿巴啊巴阿巴啊巴阿巴啊巴
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">阿巴啊巴
+                </h1>
+                <p class="lead">阿巴啊巴阿巴啊巴阿巴啊巴
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <footer class="ftr">
         <span>桥城中学2101</span>
-        <button onclick="go('https:\/\/github.com\/qczx2101\/qczx2101.github.io\/')" class="button circle">来扒光我的代码！</button>
+        <button onclick="go('https:\/\/github.com\/qczx2101\/qczx2101.github.io\/')"
+            class="button circle">来扒光我的代码！</button>
     </footer>
     <script>
         const text = document.querySelector('#text');
@@ -171,8 +292,8 @@
         document.head.appendChild(styleElement);
     </script>
     <script>
-        function go(href){
-            window.location.href=href;
+        function go(href) {
+            window.location.href = href;
         }
     </script>
 </body>
